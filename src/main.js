@@ -11,6 +11,9 @@ Vue.config.productionTip = false;
 // import 'element-ui/lib/theme-chalk/index.css'
 // Vue.use(ElementUI);
 
+//引入jQuery
+import $ from 'jquery'
+
 Vue.directive('scroll', {
     // 当组件完成一次更新时调用 还有其它的钩子函数 自行选择合适的
     componentUpdated:  (el) => {el.scrollTop = 0;}

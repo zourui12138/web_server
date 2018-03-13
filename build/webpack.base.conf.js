@@ -3,6 +3,7 @@ const path = require('path');
 const utils = require('./utils');
 const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
+const webpack = require('webpack');
 
 // 获取绝对路径
 function resolve(dir) {
@@ -32,7 +33,8 @@ module.exports = {
         // import Vue from 'vue/dist/vue.common.js'可以写成 import Vue from 'vue'
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '~': resolve('src')
+            '~': resolve('src'),
+            'jquery': 'jquery'
         }
     },
     // 不同类型模块的处理规则
@@ -80,6 +82,13 @@ module.exports = {
             }
         ]
     },
+    // 增加一个plugins
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
     node: {
         // prevent webpack from injecting useless setImmediate polyfill because Vue
         // source contains it (although only uses it if it's native).

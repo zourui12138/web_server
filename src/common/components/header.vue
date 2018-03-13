@@ -7,7 +7,7 @@
                 <li class="fl">
                     <h1>产品服务</h1>
                     <h2>Products</h2>
-                    <div class="secondNav">
+                    <div class="product secondNav">
                         <p @click="href('/mrray/sensitive')">敏感数据与免泄露</p>
                         <p @click="href('/mrray/watermark')">数字水印系统</p>
                         <p @click="href('/mrray/rayShield')">RayShield</p>
@@ -15,7 +15,14 @@
                         <p @click="href('/mrray/dataAssets')">数据资产防护</p>
                     </div>
                 </li>
-                <li class="fl"><h1>关于我们</h1><h2>About&nbsp;Us</h2></li>
+                <li class="fl">
+                    <h1>关于我们</h1>
+                    <h2>About&nbsp;Us</h2>
+                    <div class="aboutUs secondNav">
+                        <p @click="href('/mrray/aboutUsIntroduce')">企业介绍</p>
+                        <p @click="href('/mrray/aboutUsJobs')">招贤纳士</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -69,8 +76,6 @@
                     box-shadow: 2px 2px 10px #aaa;
                     border-radius: 4px;
                     transition: all .1s linear;
-                    overflow: hidden;
-                    height:240px;
                     width:200px;
                     display: none;
                     p{
@@ -82,36 +87,48 @@
                     p.current,p:hover{
                         color: #2e95ee;
                     }
-                    p:nth-child(1){
-                        background: url('../../assets/img/products/sensitive.png') no-repeat 22px center;
-                    }
-                    p:nth-child(2){
-                        background: url('../../assets/img/products/watermark.png') no-repeat 22px center;
-                    }
-                    p:nth-child(3){
-                        background: url('../../assets/img/products/rayShield.png') no-repeat 22px center;
-                    }
-                    p:nth-child(4){
-                        background: url('../../assets/img/products/bigDateSecurityGateway.png') no-repeat 22px center;
-                    }
-                    p:nth-child(5){
-                        background: url('../../assets/img/products/dataAssetsProtective.png') no-repeat 22px center;
-                    }
-                    p:nth-child(1).current,p:nth-child(1):hover{
-                        background: url('../../assets/img/products/sensitive_hover.png') no-repeat 22px center;
-                    }
-                    p:nth-child(2).current,p:nth-child(2):hover{
-                        background: url('../../assets/img/products/watermark_hover.png') no-repeat 22px center;
-                    }
-                    p:nth-child(3).current,p:nth-child(3):hover{
-                        background: url('../../assets/img/products/rayShield_hover.png') no-repeat 22px center;
-                    }
-                    p:nth-child(4).current,p:nth-child(4):hover{
-                        background: url('../../assets/img/products/bigDateSecurityGateway_hover.png') no-repeat 22px center;
-                    }
-                    p:nth-child(5).current,p:nth-child(5):hover{
-                        background: url('../../assets/img/products/dataAssetsProtective_hover.png') no-repeat 22px center;
-                    }
+                }
+                .product p:nth-child(1){
+                    background: url('../../assets/img/products/sensitive.png') no-repeat 22px center;
+                }
+                .product p:nth-child(2){
+                    background: url('../../assets/img/products/watermark.png') no-repeat 22px center;
+                }
+                .product p:nth-child(3){
+                    background: url('../../assets/img/products/rayShield.png') no-repeat 22px center;
+                }
+                .product p:nth-child(4){
+                    background: url('../../assets/img/products/bigDateSecurityGateway.png') no-repeat 22px center;
+                }
+                .product p:nth-child(5){
+                    background: url('../../assets/img/products/dataAssetsProtective.png') no-repeat 22px center;
+                }
+                .product p:nth-child(1).current,.product p:nth-child(1):hover{
+                    background: url('../../assets/img/products/sensitive_hover.png') no-repeat 22px center;
+                }
+                .product p:nth-child(2).current,.product p:nth-child(2):hover{
+                    background: url('../../assets/img/products/watermark_hover.png') no-repeat 22px center;
+                }
+                .product p:nth-child(3).current,.product p:nth-child(3):hover{
+                    background: url('../../assets/img/products/rayShield_hover.png') no-repeat 22px center;
+                }
+                .product p:nth-child(4).current,.product p:nth-child(4):hover{
+                    background: url('../../assets/img/products/bigDateSecurityGateway_hover.png') no-repeat 22px center;
+                }
+                .product p:nth-child(5).current,.product p:nth-child(5):hover{
+                    background: url('../../assets/img/products/dataAssetsProtective_hover.png') no-repeat 22px center;
+                }
+                .aboutUs p:nth-child(1){
+                    background: url('../../assets/img/aboutUs/introduce.png') no-repeat 22px center;
+                }
+                .aboutUs p:nth-child(2){
+                    background: url('../../assets/img/aboutUs/jobs.png') no-repeat 22px center;
+                }
+                .aboutUs p:nth-child(1).current,.aboutUs p:nth-child(1):hover{
+                    background: url('../../assets/img/aboutUs/introduce_hover.png') no-repeat 22px center;
+                }
+                .aboutUs p:nth-child(2).current,.aboutUs p:nth-child(2):hover{
+                    background: url('../../assets/img/aboutUs/jobs_hover.png') no-repeat 22px center;
                 }
             }
             li:hover{

@@ -20,6 +20,7 @@ import Admin from '~/modules/admin/admin'
 import Login from '~/modules/login/login'
 
 Vue.use(Router);
+
 const router =  new Router({
     // 启用vue-loader HTML5 history模式的客户端端配置-->作用是当你使用 history 模式时，URL 就像正常的 url
     mode: 'history',
