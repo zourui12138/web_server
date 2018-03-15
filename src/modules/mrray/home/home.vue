@@ -2,7 +2,19 @@
     <div id="home">
         <div class="banner">
             <ul>
-                <li>
+                <li v-show="bannerShow[0]">
+                    <div class="commonWidth clear">
+                        <div class="fl banner_left"></div>
+                        <div class="fr banner_right"></div>
+                    </div>
+                </li>
+                <li v-show="bannerShow[1]">
+                    <div class="commonWidth clear">
+                        <div class="fl banner_left"></div>
+                        <div class="fr banner_right"></div>
+                    </div>
+                </li>
+                <li v-show="bannerShow[2]">
                     <div class="commonWidth clear">
                         <div class="fl banner_left"></div>
                         <div class="fr banner_right"></div>
@@ -10,9 +22,9 @@
                 </li>
             </ul>
             <ol class="clear">
-                <li class="fl"></li>
-                <li class="fl"></li>
-                <li class="fl"></li>
+                <li class="fl" :class="{current : bannerShow[0]}" @click="toggleBanner(0)"></li>
+                <li class="fl" :class="{current : bannerShow[1]}" @click="toggleBanner(1)"></li>
+                <li class="fl" :class="{current : bannerShow[2]}" @click="toggleBanner(2)"></li>
             </ol>
         </div>
         <div class="product-service">
@@ -24,35 +36,35 @@
                 </header>
                 <section>
                     <ul class="clear">
-                        <li :class="{current: currentProductService == 'sensitive'}" @mouseover="abc('sensitive')" class="fl">
+                        <li :class="{current: currentProductService === 'sensitive'}" @mouseover="toggleProductService('sensitive')" class="fl">
                             <div></div>
                             <h1>敏感数据与免泄漏系统</h1>
                             <h3></h3>
                             <h2>敏感信息自动识别，信息分级、分类管理，机器深度学习，自动检索敏感信息增量，保护企业隐私，实现数据全局追踪</h2>
                             <button type="button">查看详情</button>
                         </li>
-                        <li :class="{current: currentProductService == 'watermark'}" @mouseover="abc('watermark')" class="fl">
+                        <li :class="{current: currentProductService === 'watermark'}" @mouseover="toggleProductService('watermark')" class="fl">
                             <div></div>
                             <h1>数字水印系统</h1>
                             <h3></h3>
                             <h2>支持多样化数据类型，跟踪数据流通轨迹，数字化标记，具备数据源可追溯性。</h2>
                             <button type="button">查看详情</button>
                         </li>
-                        <li :class="{current: currentProductService == 'RayShield'}" @mouseover="abc('RayShield')" class="fl">
+                        <li :class="{current: currentProductService === 'RayShield'}" @mouseover="toggleProductService('RayShield')" class="fl">
                             <div></div>
                             <h1>RayShield</h1>
                             <h3></h3>
                             <h2>实现文件加密保护；安全流通基础上；进行权限细分；权限可控（授予、回收等特性）。</h2>
                             <button type="button">查看详情</button>
                         </li>
-                        <li :class="{current: currentProductService == 'dataSecurity'}" @mouseover="abc('dataSecurity')" class="fl">
+                        <li :class="{current: currentProductService === 'dataSecurity'}" @mouseover="toggleProductService('dataSecurity')" class="fl">
                             <div></div>
                             <h1>大数据安全网关</h1>
                             <h3></h3>
                             <h2>平台包含安全平台用户管理系统、认证授权管控系统、安全访问审计系统、敏感信息防护系统四大模块，针对Hadoop平台网络安全、服务器安全、应用安全、数据安全构建综合性共享生态。</h2>
                             <button type="button">查看详情</button>
                         </li>
-                        <li :class="{current: currentProductService == 'dataAssets'}" @mouseover="abc('dataAssets')" class="fl">
+                        <li :class="{current: currentProductService === 'dataAssets'}" @mouseover="toggleProductService('dataAssets')" class="fl">
                             <div></div>
                             <h1>数据资产防护系统</h1>
                             <h3></h3>
@@ -131,11 +143,34 @@
         components: {Footer},
         data() {
             return{
-                currentProductService : 'RayShield'
+                currentProductService : 'RayShield',
+                timer: null,
+                bannerShow: [true,false,false]
             }
         },
         methods: {
-            abc (arg) {this.currentProductService = arg;}
+            toggleProductService (arg) {this.currentProductService = arg;},
+            bannerSlider() {
+                let me = this;
+                this.timer = setInterval(function () {
+                    let index = me.bannerShow.indexOf(true) === me.bannerShow.length-1 ? 0 : me.bannerShow.indexOf(true)+1;
+                    me.bannerShow = [false,false,false];
+                    me.bannerShow[index] = true;
+                },6000);
+            },
+            toggleBanner(index) {
+                this.timer && clearInterval(this.timer);
+                this.bannerShow = [false,false,false];
+                this.bannerShow[index] = true;
+                this.bannerSlider();
+            }
+        },
+        mounted() {
+            this.bannerSlider();
+        },
+        beforeRouteLeave (to, from, next) {
+            this.timer && clearInterval(this.timer);
+            next();
         }
     }
 </script>
@@ -212,6 +247,24 @@
                 li:nth-child(1) .banner_right{
                     background: url('../../../assets/img/home/banner_right_one.png') no-repeat center;
                 }
+                li:nth-child(2){
+                    background: url('../../../assets/img/home/banner_two.png') no-repeat center;
+                }
+                li:nth-child(2) .banner_left{
+                    background: url('../../../assets/img/home/banner_left_two.png') no-repeat center;
+                }
+                li:nth-child(2) .banner_right{
+                    background: url('../../../assets/img/home/banner_right_two.png') no-repeat center;
+                }
+                li:nth-child(3){
+                    background: url('../../../assets/img/home/banner_three.png') no-repeat center;
+                }
+                li:nth-child(3) .banner_left{
+                    background: url('../../../assets/img/home/banner_left_three.png') no-repeat center;
+                }
+                li:nth-child(3) .banner_right{
+                    background: url('../../../assets/img/home/banner_right_three.png') no-repeat center;
+                }
             }
             ol{
                 position: absolute;
@@ -267,23 +320,16 @@
                         margin-top: 80px;
                         margin-bottom: 80px;
                         transition: all .2s;
-                        h1{
-                            height:60px;
-                            line-height: 60px;
-                            margin-bottom: 4px;
-                            font-size: 16px;
-                        }
                         div{
                             margin-top: 85px;
                             height:64px;
                             transition: all .2s;
                         }
-                        h3{
-                            width:40px;
-                            height:2px;
-                            background-color: #7c848e;
-                            margin:auto;
-                            transition: all .2s;
+                        h1{
+                            height:60px;
+                            line-height: 60px;
+                            margin-bottom: 4px;
+                            font-size: 16px;
                         }
                         h2{
                             line-height: 18px;
@@ -296,6 +342,14 @@
                             transition: all .2s;
                             color: #3096ee;
                             text-indent: 2em;
+                            transition-property: visibility;
+                        }
+                        h3{
+                            width:40px;
+                            height:2px;
+                            background-color: #7c848e;
+                            margin:auto;
+                            transition: all .2s;
                         }
                         button{
                             visibility: hidden;

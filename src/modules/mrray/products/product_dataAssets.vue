@@ -18,15 +18,35 @@
         </div>
         <div class="overview_">
             <section class="commonWidth clear">
-                <div class="fl overview_content">
-                    <h1>认证</h1>
-                    <p>运维，临时用户等直接访问身份授权，网络访问路径，开放服务，流量、访问时间等进行集中策略配置。</p>
-                </div>
+                <transition name="overview_content">
+                    <div v-show="overView.certificationNav" class="fl overview_content">
+                        <h1>认证</h1>
+                        <p>运维，临时用户等直接访问身份授权，网络访问路径，开放服务，流量、访问时间等进行集中策略配置。</p>
+                    </div>
+                </transition>
+                <transition name="overview_content">
+                    <div v-show="overView.authorizationNav" class="fl overview_content">
+                        <h1>授权</h1>
+                        <p>运维操作身份，网络调用，系统请求、应用访问等行为进行集中权限认证，身份安全性确认，合法放行，非法拒绝。</p>
+                    </div>
+                </transition>
+                <transition name="overview_content">
+                    <div v-show="overView.protectNav" class="fl overview_content">
+                        <h1>保护</h1>
+                        <p>数据存储介质硬件接口保护，控制接口数据传输。SSH直接访问，防删除、防破坏，网络请求，防攻击、防爬取、非法拦截，免泄露。</p>
+                    </div>
+                </transition>
+                <transition name="overview_content">
+                    <div v-show="overView.auditNav" class="fl overview_content">
+                        <h1>审计</h1>
+                        <p>用户操作日志，请求访问日志，权限记录，异常行为等进行统计分析，用户行为、网络行为集中审计审查。</p>
+                    </div>
+                </transition>
                 <div class="fr overview_image">
-                    <h2></h2>
-                    <h2></h2>
-                    <h2></h2>
-                    <h2></h2>
+                    <h2 @click="toggleOverview('认证')" :class="{current : overView.certificationNav}"></h2>
+                    <h2 @click="toggleOverview('授权')" :class="{current : overView.authorizationNav}"></h2>
+                    <h2 @click="toggleOverview('保护')" :class="{current : overView.protectNav}"></h2>
+                    <h2 @click="toggleOverview('审计')" :class="{current : overView.auditNav}"></h2>
                 </div>
             </section>
         </div>
@@ -160,13 +180,41 @@
                     '《数据资产防护系统产品说明书》',
                     '《数据资产防护系统产品白皮书》',
                     '《数据资产防护系统产品介绍PPT》'
-                ]
+                ],
+                overView: {
+                    certificationNav: true,
+                    authorizationNav: false,
+                    protectNav: false,
+                    auditNav: false
+                }
+            }
+        },
+        methods: {
+            toggleOverview(arg) {
+                this.overView.certificationNav = false;
+                this.overView.authorizationNav = false;
+                this.overView.protectNav = false;
+                this.overView.auditNav = false;
+                switch (arg){
+                    case '认证' :this.overView.certificationNav = true;break;
+                    case '授权' :this.overView.authorizationNav = true;break;
+                    case '保护' :this.overView.protectNav = true;break;
+                    case '审计' :this.overView.auditNav = true;break;
+                }
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    @keyframes rotateCubeLeftOut {
+        50% { animation-timing-function: ease-out;  transform: translateX(-50%) translateZ(-200px) rotateY(-45deg); }
+        100% { opacity: .3; transform: translateX(-100%) rotateY(-90deg); }
+    }
+    @keyframes rotateCubeLeftIn {
+        0% { opacity: .3; transform: translateX(100%) rotateY(90deg); }
+        50% { animation-timing-function: ease-out;  transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
+    }
     #product-data-assets {
         .header {
             width: 149px;
@@ -216,6 +264,14 @@
                 p {
                     line-height: 30px;
                 }
+            }
+            .overview_content-enter-active{
+                transform-origin: 0 50%;
+                animation: rotateCubeLeftIn .6s both ease-in;
+            }
+            .overview_content-leave-active{
+                transform-origin: 100% 50%;
+                animation: rotateCubeLeftOut .6s both ease-in;
             }
             .overview_image {
                 width: 385px;

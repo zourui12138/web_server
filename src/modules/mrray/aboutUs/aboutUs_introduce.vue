@@ -4,18 +4,22 @@
             <div class="commonWidth clear">
                 <div class="banner_left fl">
                     <header>
-                        <button type="button">公司简介</button><button type="button">企业文化</button>
+                        <button type="button" :class="{current : bannerLeftIntroduceNav}" @click="toggleBannerLeftContent()">公司简介</button><button type="button" :class="{current : bannerLeftCultureNav}" @click="toggleBannerLeftContent()">企业文化</button>
                     </header>
-                    <div v-show="false">
-                        <p>迅鳐成都科技有限公司（简称‘迅鳐科技’）成立于2015年，由国内首位网络安全长江学者领头创办，是国内第一批大数据安全基础设施制造商与服务商，直接服务于国家信息中心重点筹建的政务数据支撑平台，具有国家级数据资源安全视角。</p>
-                        <p>迅鳐科技依托大数据产业，交叉于信息安全，致力于价值数据市场基础规则设计、制定、建设，以提供高水平、定制化数据安全产品、解决方案为中心，服务于政务及企业数据开发、共享健康发展、决策可行性验证。</p>
-                    </div>
-                    <div>
-                        <h1>企业宗旨：打造具备自主知识产权的数据安全产品，为客户提供高质量数据安全解决方案，构建安全。可控、可信的大数据生态环境。</h1>
-                        <h1>企业使命：数据安全为己任，客户利益至上，企业成长与股东收益双赢，激发员工潜力，实现个人价值。</h1>
-                        <h1>企业理念：创新、高效、与时俱进、价值观引领。</h1>
-                        <h1>企业愿景：建设成世界一流水平的大数据安全服务提供商。</h1>
-                    </div>
+                    <transition name="banner_left_introduce">
+                        <div class="banner_left_introduce" v-show="bannerLeftIntroduceNav">
+                            <p>迅鳐成都科技有限公司（简称‘迅鳐科技’）成立于2015年，由国内首位网络安全长江学者领头创办，是国内第一批大数据安全基础设施制造商与服务商，直接服务于国家信息中心重点筹建的政务数据支撑平台，具有国家级数据资源安全视角。</p>
+                            <p>迅鳐科技依托大数据产业，交叉于信息安全，致力于价值数据市场基础规则设计、制定、建设，以提供高水平、定制化数据安全产品、解决方案为中心，服务于政务及企业数据开发、共享健康发展、决策可行性验证。</p>
+                        </div>
+                    </transition>
+                    <transition name="banner_left_culture">
+                        <div class="banner_left_culture" v-show="bannerLeftCultureNav">
+                            <h1>企业宗旨：打造具备自主知识产权的数据安全产品，为客户提供高质量数据安全解决方案，构建安全。可控、可信的大数据生态环境。</h1>
+                            <h1>企业使命：数据安全为己任，客户利益至上，企业成长与股东收益双赢，激发员工潜力，实现个人价值。</h1>
+                            <h1>企业理念：创新、高效、与时俱进、价值观引领。</h1>
+                            <h1>企业愿景：建设成世界一流水平的大数据安全服务提供商。</h1>
+                        </div>
+                    </transition>
                 </div>
                 <div class="banner_right fr"></div>
             </div>
@@ -122,7 +126,9 @@
                     }
                 ],
                 index : 0,// 根据不同的索引值需改不同的计算属性
-                step : 0// 移动几步
+                step : 0, // 移动几步
+                bannerLeftIntroduceNav: true,
+                bannerLeftCultureNav: false
             }
         },
         computed:{
@@ -164,12 +170,32 @@
                         $(this.$refs.timeAxis).animate({left : -this.step*distance+'px'},500,function () {isMove = false;});
                     }
                 }
+            },
+            toggleBannerLeftContent() {
+                this.bannerLeftIntroduceNav = !this.bannerLeftIntroduceNav;
+                this.bannerLeftCultureNav = !this.bannerLeftCultureNav;
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    @keyframes rotateCubeLeftOut {
+        50% { animation-timing-function: ease-out;  transform: translateX(-50%) translateZ(-200px) rotateY(-45deg); }
+        100% { opacity: .3; transform: translateX(-100%) rotateY(-90deg); }
+    }
+    @keyframes rotateCubeLeftIn {
+        0% { opacity: .3; transform: translateX(100%) rotateY(90deg); }
+        50% { animation-timing-function: ease-out;  transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
+    }
+    @keyframes rotateCubeRightOut {
+        50% { animation-timing-function: ease-out; transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
+        100% { opacity: .3; transform: translateX(100%) rotateY(90deg); }
+    }
+    @keyframes rotateCubeRightIn {
+        0% { opacity: .3; transform: translateX(-100%) rotateY(-90deg); }
+        50% { animation-timing-function: ease-out; transform: translateX(-50%) translateZ(-200px) rotateY(-45deg); }
+    }
     #aboutUS-introduce{
         .banner{
             height:430px;
@@ -226,6 +252,22 @@
                             line-height: 25px;
                             text-align: justify;
                         }
+                    }
+                    .banner_left_introduce-enter-active{
+                        transform-origin: 100% 50%;
+                        animation: rotateCubeRightIn .6s both ease-in;
+                    }
+                    .banner_left_introduce-leave-active{
+                        transform-origin: 100% 50%;
+                        animation: rotateCubeLeftOut .6s both ease-in;
+                    }
+                    .banner_left_culture-enter-active{
+                        transform-origin: 0 50%;
+                        animation: rotateCubeLeftIn .6s both ease-in;
+                    }
+                    .banner_left_culture-leave-active{
+                        transform-origin: 0 50%;
+                        animation: rotateCubeRightOut .6s both ease-in;
                     }
                 }
             }
