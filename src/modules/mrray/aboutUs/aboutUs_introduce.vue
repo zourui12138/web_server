@@ -44,12 +44,88 @@
                 </ul>
             </div>
         </div>
+        <div class="dividingLine"></div>
+        <div class="coreCreation">
+            <div class="commonWidth">
+                <header>
+                    <h1>核心主创</h1>
+                    <h2>Core&nbsp;Creation</h2>
+                </header>
+                <section>
+                    <div class="coreCreationList">
+                        <div v-for="(i,index) in coreCreationList" :class="coreCreationClassName[index]">
+                            <h1>{{i.name}}</h1>
+                            <h2>{{i.position}}</h2>
+                            <img :src="i.src" alt="" @click="coreCreationAnimate(index)">
+                        </div>
+                    </div>
+                    <div class="coreCreationMsg">
+                        <ul class="clear">
+                            <li class="fl">
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '张小松'">
+                                        <p v-for="i in coreCreationList[0].personalProfile"><strong></strong><span>{{i}}</span></p>
+                                    </div>
+                                </transition>
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '夏琦'">
+                                        <p v-for="i in coreCreationList[1].personalProfile"><strong></strong><span>{{i}}</span></p>
+                                    </div>
+                                </transition>
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '陈瑞东'">
+                                        <p v-for="i in coreCreationList[2].personalProfile"><strong></strong><span>{{i}}</span></p>
+                                    </div>
+                                </transition>
+                            </li>
+                            <li class="fl">
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '张小松'">
+                                        <p>{{coreCreationList[0].researchDirection}}</p>
+                                    </div>
+                                </transition>
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '夏琦'">
+                                        <p>{{coreCreationList[1].researchDirection}}</p>
+                                    </div>
+                                </transition>
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '陈瑞东'">
+                                        <p>{{coreCreationList[2].researchDirection}}</p>
+                                    </div>
+                                </transition>
+                            </li>
+                            <li class="fl">
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '张小松'">
+                                        <p v-for="i in coreCreationList[0].kudos"><strong></strong><span>{{i}}</span></p>
+                                    </div>
+                                </transition>
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '夏琦'">
+                                        <p v-for="i in coreCreationList[1].kudos"><strong></strong><span>{{i}}</span></p>
+                                    </div>
+                                </transition>
+                                <transition name="bounce">
+                                    <div v-show="currentCoreCreation === '陈瑞东'">
+                                        <p v-for="i in coreCreationList[2].kudos"><strong></strong><span>{{i}}</span></p>
+                                    </div>
+                                </transition>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
         <Footer></Footer>
     </div>
 </template>
 
 <script>
     import Footer from '~/common/components/footer'
+    import Zhang from '~/assets/img/aboutUs/introduce/zhang.png'
+    import Xia from '~/assets/img/aboutUs/introduce/xia.png'
+    import Chen from '~/assets/img/aboutUs/introduce/chen.png'
 
     export default {
         name: "about-us_introduce",
@@ -115,20 +191,74 @@
                     {
                         year : 2019,
                         events : []
-                    },
-                    {
-                        year : 2020,
-                        events : []
-                    },
-                    {
-                        year : 2021,
-                        events : []
                     }
                 ],
                 index : 0,// 根据不同的索引值需改不同的计算属性
                 step : 0, // 移动几步
                 bannerLeftIntroduceNav: true,
-                bannerLeftCultureNav: false
+                bannerLeftCultureNav: false,
+                coreCreationClassName: ['','',''],
+                isAnimate: false,
+                coreCreationList: [
+                    {
+                        src : Zhang,
+                        name : '张小松',
+                        position : '迅鳐科技首席科学家',
+                        personalProfile : [
+                            '长江学者特聘教授；',
+                            '教育部十三五网络空间安全战略规划组长；',
+                            '电子科技大学网络空间安全研究中心主任；',
+                            '电子科技大学大数据研究中心副主任；',
+                            '四川省学术技术带头人；',
+                            '保密通信国防科技重点实验室客座专家；'
+                        ],
+                        researchDirection : '重点围绕网络空间安全：IT基础架构、大数据安全及应用、嵌入式平台安全、网络攻击检测与软件脆弱性等关键领域，开展创新研究和技术攻关，同时深入能源动力、电子机械、计算机应用技术和信息安全研究。',
+                        kudos : [
+                            '《2016年度成就奖》',
+                            '《2012国家科技进步二等奖》',
+                            '《2010四川省科技进步一等奖》',
+                            '《2008四川省科技进步二等奖》',
+                            '获国家版权局计算机软件著作权登记9项，授权发明专利7项'
+                        ]
+                    },
+                    {
+                        src : Xia,
+                        name : '夏琦',
+                        position : '迅鳐科技COO',
+                        personalProfile : [
+                            '电子科技大学计算机应用技术工学博士，电子科技大学副教授，研究生导师；',
+                            '美国宾夕法尼亚大学访问学者；',
+                            '网络空间安全研究中心副主任；',
+                            '大数据研究中心科研办主任；',
+                            '安全大数据研究所副所长；'
+                        ],
+                        researchDirection : '主要从事网络安全技术及其应用、密码学、大数据安全等领域研究，参与国家自然科学基金国际合作项目、中央高校基本科研业务费项目、国家AQ部部级课题、四川省科技支撑计划项目、型号专项课题等。',
+                        kudos : [
+                            '2012年获得国家科技进步二等奖',
+                            '2010年获得四川省科技进步一等奖',
+                            '发表论文20余篇，出版教材多部，英文专著一部',
+                            '国家自然科学基金国际合作项目：SecureMultiparty Computation: Efficiency andApplications，2013.01-2013,12，第一负责人'
+                        ]
+                    },
+                    {
+                        src : Chen,
+                        name : '陈瑞东',
+                        position : '迅鳐科技CTO',
+                        personalProfile : [
+                            '电子科技大学计算机博士；',
+                            '主要从事数据安全、网络与云安全、系统攻击与测试验证等研究工作；',
+                            '具有大型系统架构设计、网络安全解决方案的设计与实验经验；'
+                        ],
+                        researchDirection : '主要从事数据结构、信息安全技术、网络空间协议、数据通信协议等领域研究，具有政务数据基础设施设计、数据流通共享机制、数据安全生态布防经验，为多家企业提供信息安全（数据存储、数据共享、数据决策性管理等）解决方案。',
+                        kudos : [
+                            '参编网络溯源专著1部，国内外发表论文5篇',
+                            '国家发明专利5项',
+                            '省科技进步一等奖1项，二等奖1项',
+                            '国家科技进步奖',
+                            '参与国家863重大课题、国家自然科学基金面上、军方型号、华为、中电集团等课题70余项'
+                        ]
+                    }
+                ]
             }
         },
         computed:{
@@ -140,6 +270,9 @@
             },
             currentYear() {
                 return this.eventsList[this.index].year;
+            },
+            currentCoreCreation() {
+                return this.coreCreationList[0].name;
             }
         },
         methods: {
@@ -174,28 +307,39 @@
             toggleBannerLeftContent() {
                 this.bannerLeftIntroduceNav = !this.bannerLeftIntroduceNav;
                 this.bannerLeftCultureNav = !this.bannerLeftCultureNav;
+            },
+            moveLeft() {
+                this.$set(this.coreCreationClassName,0,'moveLeft');
+                this.$set(this.coreCreationClassName,1,'moveRight');
+                this.$set(this.coreCreationClassName,2,'moveCenter');
+                this.isAnimate = true;
+            },
+            moveRight() {
+                this.$set(this.coreCreationClassName,0,'moveRight');
+                this.$set(this.coreCreationClassName,1,'moveCenter');
+                this.$set(this.coreCreationClassName,2,'moveLeft');
+                this.isAnimate = true;
+            },
+            coreCreationAnimate(index) {
+                let me = this;
+                if(!this.isAnimate){
+                    index === 1 && (this.moveRight());
+                    index === 2 && (this.moveLeft());
+                    setTimeout(function () {
+                        me.isAnimate = false;
+                        me.$set(me.coreCreationClassName,0,'');
+                        me.$set(me.coreCreationClassName,1,'');
+                        me.$set(me.coreCreationClassName,2,'');
+                        index === 1 && (me.coreCreationList = me.coreCreationList.concat(me.coreCreationList.splice(0,1)));
+                        index === 2 && (me.coreCreationList = me.coreCreationList.splice(me.coreCreationList.length-1,1).concat(me.coreCreationList));
+                    },500);
+                }
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    @keyframes rotateCubeLeftOut {
-        50% { animation-timing-function: ease-out;  transform: translateX(-50%) translateZ(-200px) rotateY(-45deg); }
-        100% { opacity: .3; transform: translateX(-100%) rotateY(-90deg); }
-    }
-    @keyframes rotateCubeLeftIn {
-        0% { opacity: .3; transform: translateX(100%) rotateY(90deg); }
-        50% { animation-timing-function: ease-out;  transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
-    }
-    @keyframes rotateCubeRightOut {
-        50% { animation-timing-function: ease-out; transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
-        100% { opacity: .3; transform: translateX(100%) rotateY(90deg); }
-    }
-    @keyframes rotateCubeRightIn {
-        0% { opacity: .3; transform: translateX(-100%) rotateY(-90deg); }
-        50% { animation-timing-function: ease-out; transform: translateX(-50%) translateZ(-200px) rotateY(-45deg); }
-    }
     #aboutUS-introduce{
         .banner{
             height:430px;
@@ -339,6 +483,108 @@
                     margin-right: 20px;
                     font-weight: normal;
                     margin-top: 10px;
+                }
+            }
+        }
+        .dividingLine{
+            height: 100px;
+            background: url('../../../assets/img/aboutUs/introduce/dividingLine.png') no-repeat center;
+        }
+        .coreCreation{
+            background: url('../../../assets/img/aboutUs/introduce/coreCreation.png') no-repeat center bottom;
+            header{
+                width:149px;
+                padding-top: 35px;
+                h1{
+                    font-size: 18px;
+                    height:28px;
+                    line-height: 28px;
+                }
+                h2{
+                    font-size: 14px;
+                    height:22px;
+                    line-height: 22px;
+                    border-bottom: 2px solid #2e95ee;
+                    padding-bottom: 6px;
+                }
+            }
+            section{
+                height:765px;
+                .coreCreationList{
+                    transform-style: preserve-3d;
+                    perspective : 1500px;
+                    position: relative;
+                    div{
+                        width:250px;
+                        height:350px;
+                        position: absolute;
+                        top:40px;
+                        left:0;
+                        right:0;
+                        margin:auto;
+                        text-align: center;
+                        line-height: 40px;
+                        h1{
+                            font-size: 24px;
+                        }
+                        h2{
+                            font-size: 14px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    div.moveLeft{
+                        animation: moveLeft .5s both linear;
+                    }
+                    div.moveRight{
+                        animation: moveRight .5s both linear;
+                    }
+                    div.moveCenter{
+                        animation: moveCenter .5s both linear;
+                    }
+                    div:nth-child(1){
+                        transform: translateZ(0) translateX(0);
+                        color: #2e95ee;
+                    }
+                    div:nth-child(2){
+                        transform: translateZ(-450px) translateX(-450px);
+                    }
+                    div:nth-child(3){
+                        transform: translateZ(-450px) translateX(450px);
+                    }
+                }
+                .coreCreationMsg{
+                    padding-top: 445px;
+                    li{
+                        width:280px;
+                        height: 240px;
+                        overflow: hidden;
+                        text-align: justify;
+                        padding:80px 60px 0 60px;
+                        font-size: 14px;
+                        line-height: 25px;
+                        strong{
+                            display: inline-block;
+                            width:9px;
+                            height:9px;
+                            border-radius: 50%;
+                            vertical-align: top;
+                            background-color: #919dac;
+                            margin-top: 8px;
+                            margin-right: 5px;
+                        }
+                        .bounce-enter-active {
+                            animation: bounceIn .5s;
+                        }
+                    }
+                    li:nth-child(1){
+                        background: url('../../../assets/img/aboutUs/introduce/personal_profile.png') no-repeat center 0;
+                    }
+                    li:nth-child(2){
+                        background: url('../../../assets/img/aboutUs/introduce/research_direction.png') no-repeat center 0;
+                    }
+                    li:nth-child(3){
+                        background: url('../../../assets/img/aboutUs/introduce/kudos.png') no-repeat center 0;
+                    }
                 }
             }
         }

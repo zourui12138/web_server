@@ -207,14 +207,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @keyframes rotateCubeLeftOut {
-        50% { animation-timing-function: ease-out;  transform: translateX(-50%) translateZ(-200px) rotateY(-45deg); }
-        100% { opacity: .3; transform: translateX(-100%) rotateY(-90deg); }
-    }
-    @keyframes rotateCubeLeftIn {
-        0% { opacity: .3; transform: translateX(100%) rotateY(90deg); }
-        50% { animation-timing-function: ease-out;  transform: translateX(50%) translateZ(-200px) rotateY(45deg); }
-    }
     #product-data-assets {
         .header {
             width: 149px;
