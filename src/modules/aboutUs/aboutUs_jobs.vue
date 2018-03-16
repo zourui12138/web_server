@@ -44,11 +44,11 @@
         .banner{
             height:144px;
             padding-top: 56px;
-            background: url('../../../assets/img/aboutUs/jobs/banner.png') no-repeat center;
+            background: url('../../assets/img/aboutUs/jobs/banner.png') no-repeat center;
             div{
                 width:256px;
                 height:87px;
-                background: url('../../../assets/img/aboutUs/jobs/bannerContent.png') no-repeat center;
+                background: url('../../assets/img/aboutUs/jobs/bannerContent.png') no-repeat center;
                 margin:auto;
                 animation-name: zoomInLeft;
                 animation-duration: 1s;

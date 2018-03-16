@@ -343,13 +343,13 @@
     #aboutUS-introduce{
         .banner{
             height:430px;
-            background: url('../../../assets/img/aboutUs/introduce/banner.png') no-repeat center;
+            background: url('../../assets/img/aboutUs/introduce/banner.png') no-repeat center;
             >div{
                 padding-top: 95px;
                 .banner_right{
                     width:415px;
                     height:250px;
-                    background: url('../../../assets/img/aboutUs/introduce/banner_computer.png') no-repeat center;
+                    background: url('../../assets/img/aboutUs/introduce/banner_computer.png') no-repeat center;
                     animation-name: zoomInRight;
                     animation-duration: 1s;
                 }
@@ -436,7 +436,7 @@
             }
             .timeAxis{
                 font-size: 14px;
-                background: url('../../../assets/img/aboutUs/introduce/timeAxis.png') no-repeat center;
+                background: url('../../assets/img/aboutUs/introduce/timeAxis.png') no-repeat center;
                 div{
                     overflow: hidden;
                     height:160px;
@@ -488,10 +488,10 @@
         }
         .dividingLine{
             height: 100px;
-            background: url('../../../assets/img/aboutUs/introduce/dividingLine.png') no-repeat center;
+            background: url('../../assets/img/aboutUs/introduce/dividingLine.png') no-repeat center;
         }
         .coreCreation{
-            background: url('../../../assets/img/aboutUs/introduce/coreCreation.png') no-repeat center bottom;
+            background: url('../../assets/img/aboutUs/introduce/coreCreation.png') no-repeat center bottom;
             header{
                 width:149px;
                 padding-top: 35px;
@@ -577,13 +577,13 @@
                         }
                     }
                     li:nth-child(1){
-                        background: url('../../../assets/img/aboutUs/introduce/personal_profile.png') no-repeat center 0;
+                        background: url('../../assets/img/aboutUs/introduce/personal_profile.png') no-repeat center 0;
                     }
                     li:nth-child(2){
-                        background: url('../../../assets/img/aboutUs/introduce/research_direction.png') no-repeat center 0;
+                        background: url('../../assets/img/aboutUs/introduce/research_direction.png') no-repeat center 0;
                     }
                     li:nth-child(3){
-                        background: url('../../../assets/img/aboutUs/introduce/kudos.png') no-repeat center 0;
+                        background: url('../../assets/img/aboutUs/introduce/kudos.png') no-repeat center 0;
                     }
                 }
             }

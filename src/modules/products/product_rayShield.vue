@@ -12,7 +12,7 @@
                 <h2>Product&nbsp;Overview</h2>
             </header>
             <section class="clear">
-                <img class="fl" src="../../../assets/img/products/rayShield/overview.png" alt="">
+                <img class="fl" src="../../assets/img/products/rayShield/overview.png" alt="">
                 <p class="fr">数据哨兵系列之----迅鳐数盾（Rayshield），主要解决文件安全与权属问题，以文件加密保护为基础，每一份安全文件配置“身份证”：文件信息、所有者、访问策略唯一标识，加工、伪造、转换不可消除；优化管控：权限细分、最小化（可读、可编辑、可打印、另存为）授予、回收；实现文件全生命周期保护（生成、流通、使用、销毁）。</p>
             </section>
         </div>
@@ -59,56 +59,56 @@
                 <ul class="clear">
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_errorData.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_errorData.png" alt="">
                             <h1>异常数据及时撤回</h1>
                             <p>数盾内置异常发现与撤回功能，及时发现数据泄漏源头及扩散程度，从源头撤回所有数据。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_flexibility.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_flexibility.png" alt="">
                             <h1>灵活策略组合</h1>
                             <p>由基本权限积木般灵活组成安全策略，适应于复杂多变的应用场景。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_visualization.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_visualization.png" alt="">
                             <h1>数据资产可视化</h1>
                             <p>WEB管理面板内置多个可视化组件，清晰、全面呈现所有数据资产。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_audit.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_audit.png" alt="">
                             <h1>全面审计数据使用合规性</h1>
                             <p>访问信息：时间、身份、操作、地点全纪录，通过WEB管理面板俯瞰用户使用活动。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_lifeCycle.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_lifeCycle.png" alt="">
                             <h1>全生命周期保护</h1>
                             <p>以数据为中心，贯穿数据生产、传输、应用、销毁，全生命周期提供安全保护。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_policy.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_policy.png" alt="">
                             <h1>策略中心化管理</h1>
                             <p>安全云平台支持管理敏感企业数据的策略中心化，策略将伴随数据传输被全局、自动执行。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_format.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_format.png" alt="">
                             <h1>支持格式齐全</h1>
                             <p>office文件保护：Word、Excel、PPT和图片格式支持：BMP、JPG、JPEG、PNG、GIF等。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/rayShield/features_encrypt.png" alt="">
+                            <img src="../../assets/img/products/rayShield/features_encrypt.png" alt="">
                             <h1>加密方式多样</h1>
                             <p>支持Outlook邮件附件加密，并右键快捷方式生成，社交工具传输。</p>
                         </div>
@@ -125,28 +125,28 @@
                 <section>
                     <ul class="clear">
                         <li class="fl">
-                            <img class="fl" src="../../../assets/img/products/rayShield/application_1.png" alt="">
+                            <img class="fl" src="../../assets/img/products/rayShield/application_1.png" alt="">
                             <div class="fr">
                                 <h1>彼此信任的业务数据交换</h1>
                                 <p>可以做到只进不出；能看不能改；防截屏；定时销毁。企业对于客户、自身资料的安全保护，有利于提升品牌形象。</p>
                             </div>
                         </li>
                         <li class="fl">
-                            <img class="fl" src="../../../assets/img/products/rayShield/application_2.png" alt="">
+                            <img class="fl" src="../../assets/img/products/rayShield/application_2.png" alt="">
                             <div class="fr">
                                 <h1>企业高管的可靠“数据盾牌”</h1>
                                 <p>可以实现：独有身份验证；能看不能改；“三防”保护体系；闭环的线下办公环境。</p>
                             </div>
                         </li>
                         <li class="fl">
-                            <img class="fl" src="../../../assets/img/products/rayShield/application_3.png" alt="">
+                            <img class="fl" src="../../assets/img/products/rayShield/application_3.png" alt="">
                             <div class="fr">
                                 <h1>离线办公与离线归档</h1>
                                 <p>支持安全云桌面系统对接；提供“数盾之心”离线办公平台；数据自毁功能，保障企业数据安全防网络攻击，窃取企业核心、偷窥用户隐私。</p>
                             </div>
                         </li>
                         <li class="fl">
-                            <img class="fl" src="../../../assets/img/products/rayShield/application_4.png" alt="">
+                            <img class="fl" src="../../assets/img/products/rayShield/application_4.png" alt="">
                             <div class="fr">
                                 <h1>杜绝“U盘小偷/U盘病毒”</h1>
                                 <p>独有的身份验证；防导出、防另存为；内核级防毒体系；密闭的环境防大环境窃密。</p>
@@ -227,7 +227,7 @@
             section{
                 position: relative;
                 height:513px;
-                background: url('../../../assets/img/products/rayShield/function.png') no-repeat center 40px;
+                background: url('../../assets/img/products/rayShield/function.png') no-repeat center 40px;
                 div{
                     position: absolute;
                     width:360px;

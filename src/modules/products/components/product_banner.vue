@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
     .banner{
         height:400px;
-        background: url('../../../../assets/img/products/banner.png') no-repeat center;
+        background: url('../../../assets/img/products/banner.png') no-repeat center;
         .commonWidth{
             position: relative;
             .productIntroduce{

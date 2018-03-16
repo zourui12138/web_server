@@ -30,7 +30,7 @@
                 padding-left: 20px;
                 height:20px;
                 line-height: 20px;
-                background: url('../../../../assets/img/products/download.png') no-repeat 0 center;
+                background: url('../../../assets/img/products/download.png') no-repeat 0 center;
                 margin-right: 20px;
                 cursor: pointer;
             }

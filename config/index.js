@@ -9,7 +9,15 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         // 下面是代理表，作用是用来，建一个虚拟api服务器用来代理本机的请求，只能用于开发模式
-        proxyTable: {},
+        proxyTable: {
+            '/api': {
+                target: 'http://localhost:4000',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
+        },
         /*--mock.js生成数据结构(仅用于开发阶段)
         vue-cli使用这个功能是借助http-proxy-middleware插件，一般解决跨域请求api
         proxyTable: {
@@ -24,7 +32,7 @@ module.exports = {
         */
         // 下面是dev-server的端口号，可以自行更改
         host: 'localhost',
-        port: 3000,
+        port: 5000,
         // 下面表示是否自定代开浏览器
         autoOpenBrowser: false,
         errorOverlay: true,

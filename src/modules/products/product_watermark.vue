@@ -12,7 +12,7 @@
                 <h2>Product&nbsp;Overview</h2>
             </header>
             <section class="clear">
-                <img class="fl" src="../../../assets/img/products/watermark/overview.png" alt="">
+                <img class="fl" src="../../assets/img/products/watermark/overview.png" alt="">
                 <p class="fr">迅鳐水印与追溯服务系统，采用基于人类视觉系统（HGWF）的数字水印框架，内置自主研制的FluxLabel海量数据高速标记引擎，解决了大数据环境下数据频繁使用所面临的版权问题、数据泄露后的追责问题、数据质量以及完整性等数据传播使用中的诸多问题。</p>
             </section>
         </div>
@@ -151,7 +151,7 @@
             background-color: #fcfcfc;
             >div{
                 height:730px;
-                background: url('../../../assets/img/products/watermark/function.png') no-repeat left center;
+                background: url('../../assets/img/products/watermark/function.png') no-repeat left center;
                 section{
                     div{
                         margin-top: 20px;

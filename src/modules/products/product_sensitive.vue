@@ -12,7 +12,7 @@
                 <h2>Product&nbsp;Overview</h2>
             </header>
             <section class="clear">
-                <img class="fl" src="../../../assets/img/products/sensitive/overview.png" alt="">
+                <img class="fl" src="../../assets/img/products/sensitive/overview.png" alt="">
                 <p class="fr">迅鳐敏感信息与免泄露系统是面向企业、政府等机构推出的一款敏感数据去隐私化产品。系统内置敏感信息搜索引擎，自动检索敏感信息，基础算法+可扩充模式、自定义脱敏策略，满足不同业务场景。支持数据类型多样：PostgreSQL、MySQL、Oracle、Greenplumn、Hive、SQL SERVER、DB2等数据库，Excel、csv等结构化数据，智能、灵活、高效工作，满足企业、政府敏感信息管理与保护需求。</p>
             </section>
         </div>
@@ -151,7 +151,7 @@
             background-color: #fcfcfc;
             >div{
                 height:730px;
-                background: url('../../../assets/img/products/sensitive/function.png') no-repeat right center;
+                background: url('../../assets/img/products/sensitive/function.png') no-repeat right center;
                 section{
                     div{
                         margin-top: 20px;

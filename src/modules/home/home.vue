@@ -86,7 +86,7 @@
                 <ul class="clear commonWidth">
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/home/solution_icon1.png" alt="">
+                            <img src="../../assets/img/home/solution_icon1.png" alt="">
                             <h1></h1>
                             <h2>政务数据服务体系</h2>
                             <p>提供政务数据共享与服务，以大数据计算为核心，通过对数据采集、存储、加工，服务政务，提高政府精准治理能力和决策力。</p>
@@ -95,7 +95,7 @@
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/home/solution_icon2.png" alt="">
+                            <img src="../../assets/img/home/solution_icon2.png" alt="">
                             <h1></h1>
                             <h2>数据安全生命周期</h2>
                             <p>融合数据生产、数据流通、数据使用、数据销毁，构建数据安全体系：数据源保护，数据流通追踪定位，数据合规使用，数据增值服务，结束生命。</p>
@@ -104,7 +104,7 @@
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/home/solution_icon3.png" alt="">
+                            <img src="../../assets/img/home/solution_icon3.png" alt="">
                             <h1></h1>
                             <h2>大数据安全生态</h2>
                             <p>建立安全合规技术体系，数据共享生态，保护大数据权属性、保密性、完整性、可用性、可追溯及敏感度管理， 实现大数据“可管、可控、可信”。</p>
@@ -137,6 +137,7 @@
 
 <script>
     import Footer from '~/common/components/footer'
+    import { homeNews } from "~/api/getData";
 
     export default {
         name: "home",
@@ -163,10 +164,16 @@
                 this.bannerShow = [false,false,false];
                 this.bannerShow[index] = true;
                 this.bannerSlider();
+            },
+            async getNewsData() {
+                let data;
+                data = await homeNews();
+                console.log(data);
             }
         },
         mounted() {
             this.bannerSlider();
+            this.getNewsData();
         },
         beforeRouteLeave (to, from, next) {
             this.timer && clearInterval(this.timer);
@@ -215,31 +222,31 @@
                     top:0;
                 }
                 li:nth-child(1){
-                    background: url('../../../assets/img/home/banner_one.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_one.png') no-repeat center;
                 }
                 li:nth-child(1) .banner_left{
-                    background: url('../../../assets/img/home/banner_left_one.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_left_one.png') no-repeat center;
                 }
                 li:nth-child(1) .banner_right{
-                    background: url('../../../assets/img/home/banner_right_one.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_right_one.png') no-repeat center;
                 }
                 li:nth-child(2){
-                    background: url('../../../assets/img/home/banner_two.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_two.png') no-repeat center;
                 }
                 li:nth-child(2) .banner_left{
-                    background: url('../../../assets/img/home/banner_left_two.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_left_two.png') no-repeat center;
                 }
                 li:nth-child(2) .banner_right{
-                    background: url('../../../assets/img/home/banner_right_two.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_right_two.png') no-repeat center;
                 }
                 li:nth-child(3){
-                    background: url('../../../assets/img/home/banner_three.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_three.png') no-repeat center;
                 }
                 li:nth-child(3) .banner_left{
-                    background: url('../../../assets/img/home/banner_left_three.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_left_three.png') no-repeat center;
                 }
                 li:nth-child(3) .banner_right{
-                    background: url('../../../assets/img/home/banner_right_three.png') no-repeat center;
+                    background: url('../../assets/img/home/banner_right_three.png') no-repeat center;
                 }
             }
             ol{
@@ -282,7 +289,7 @@
                 z-index: 100;
                 .header{
                     margin-bottom: 40px;
-                    background: url('../../../assets/img/home/header_product_service.png') no-repeat right 39px;
+                    background: url('../../assets/img/home/header_product_service.png') no-repeat right 39px;
                 }
                 section{
                     height:460px;
@@ -340,19 +347,19 @@
                         }
                     }
                     li:nth-child(1) div{
-                        background: url('../../../assets/img/home/sensitive_.png') no-repeat center;
+                        background: url('../../assets/img/home/sensitive_.png') no-repeat center;
                     }
                     li:nth-child(2) div{
-                        background: url('../../../assets/img/home/watermark_.png') no-repeat center;
+                        background: url('../../assets/img/home/watermark_.png') no-repeat center;
                     }
                     li:nth-child(3) div{
-                        background: url('../../../assets/img/home/rayshield_.png') no-repeat center;
+                        background: url('../../assets/img/home/rayshield_.png') no-repeat center;
                     }
                     li:nth-child(4) div{
-                        background: url('../../../assets/img/home/bigData_.png') no-repeat center;
+                        background: url('../../assets/img/home/bigData_.png') no-repeat center;
                     }
                     li:nth-child(5) div{
-                        background: url('../../../assets/img/home/dataAssets_.png') no-repeat center;
+                        background: url('../../assets/img/home/dataAssets_.png') no-repeat center;
                     }
                     li.current{
                         padding:0 50px;
@@ -380,19 +387,19 @@
                         opacity: 1;
                     }
                     li:nth-child(1).current div{
-                        background: url('../../../assets/img/home/sensitive.png') no-repeat center;
+                        background: url('../../assets/img/home/sensitive.png') no-repeat center;
                     }
                     li:nth-child(2).current div{
-                        background: url('../../../assets/img/home/watermark.png') no-repeat center;
+                        background: url('../../assets/img/home/watermark.png') no-repeat center;
                     }
                     li:nth-child(3).current div{
-                        background: url('../../../assets/img/home/rayshield.png') no-repeat center;
+                        background: url('../../assets/img/home/rayshield.png') no-repeat center;
                     }
                     li:nth-child(4).current div{
-                        background: url('../../../assets/img/home/bigData.png') no-repeat center;
+                        background: url('../../assets/img/home/bigData.png') no-repeat center;
                     }
                     li:nth-child(5).current div{
-                        background: url('../../../assets/img/home/dataAssets.png') no-repeat center;
+                        background: url('../../assets/img/home/dataAssets.png') no-repeat center;
                     }
                 }
             }
@@ -401,7 +408,7 @@
         .solution{
             .header{
                 margin-bottom: 40px;
-                background: url('../../../assets/img/home/header_solution.png') no-repeat right 39px;
+                background: url('../../assets/img/home/header_solution.png') no-repeat right 39px;
             }
             section{
                 background-color: #3f464d;
@@ -476,20 +483,20 @@
                     }
                 }
                 li:nth-child(1){
-                    background: url('../../../assets/img/home/solution_bg1.png') no-repeat center;
+                    background: url('../../assets/img/home/solution_bg1.png') no-repeat center;
                 }
                 li:nth-child(2){
-                    background: url('../../../assets/img/home/solution_bg2.png') no-repeat center;
+                    background: url('../../assets/img/home/solution_bg2.png') no-repeat center;
                 }
                 li:nth-child(3){
-                    background: url('../../../assets/img/home/solution_bg3.png') no-repeat center;
+                    background: url('../../assets/img/home/solution_bg3.png') no-repeat center;
                 }
             }
         }
         /*dividingLine*/
         .dividingLine{
             height:100px;
-            background: url('../../../assets/img/home/dividingLine.png') no-repeat center;
+            background: url('../../assets/img/home/dividingLine.png') no-repeat center;
             margin-top: 40px;
         }
         /*partners*/
@@ -497,7 +504,7 @@
             margin-bottom: 40px;
             .header{
                 margin-bottom: 40px;
-                background: url('../../../assets/img/home/header_partner.png') no-repeat right 39px;
+                background: url('../../assets/img/home/header_partner.png') no-repeat right 39px;
             }
             li{
                 width:300px;
@@ -506,52 +513,52 @@
                 transition: all .5s;
             }
             li:nth-child(1){
-                background: url('../../../assets/img/home/partner1.png') no-repeat center;
+                background: url('../../assets/img/home/partner1.png') no-repeat center;
             }
             li:nth-child(2){
-                background: url('../../../assets/img/home/partner2.png') no-repeat center;
+                background: url('../../assets/img/home/partner2.png') no-repeat center;
             }
             li:nth-child(3){
-                background: url('../../../assets/img/home/partner3.png') no-repeat center;
+                background: url('../../assets/img/home/partner3.png') no-repeat center;
             }
             li:nth-child(4){
-                background: url('../../../assets/img/home/partner4.png') no-repeat center;
+                background: url('../../assets/img/home/partner4.png') no-repeat center;
             }
             li:nth-child(5){
-                background: url('../../../assets/img/home/partner5.png') no-repeat center;
+                background: url('../../assets/img/home/partner5.png') no-repeat center;
             }
             li:nth-child(6){
-                background: url('../../../assets/img/home/partner6.png') no-repeat center;
+                background: url('../../assets/img/home/partner6.png') no-repeat center;
             }
             li:nth-child(7){
-                background: url('../../../assets/img/home/partner7.png') no-repeat center;
+                background: url('../../assets/img/home/partner7.png') no-repeat center;
             }
             li:nth-child(8){
-                background: url('../../../assets/img/home/partner8.png') no-repeat center;
+                background: url('../../assets/img/home/partner8.png') no-repeat center;
             }
             li:nth-child(1):hover{
-                background: url('../../../assets/img/home/partner1_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner1_hover.png') no-repeat center;
             }
             li:nth-child(2):hover{
-                background: url('../../../assets/img/home/partner2_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner2_hover.png') no-repeat center;
             }
             li:nth-child(3):hover{
-                background: url('../../../assets/img/home/partner3_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner3_hover.png') no-repeat center;
             }
             li:nth-child(4):hover{
-                background: url('../../../assets/img/home/partner4_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner4_hover.png') no-repeat center;
             }
             li:nth-child(5):hover{
-                background: url('../../../assets/img/home/partner5_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner5_hover.png') no-repeat center;
             }
             li:nth-child(6):hover{
-                background: url('../../../assets/img/home/partner6_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner6_hover.png') no-repeat center;
             }
             li:nth-child(7):hover{
-                background: url('../../../assets/img/home/partner7_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner7_hover.png') no-repeat center;
             }
             li:nth-child(8):hover{
-                background: url('../../../assets/img/home/partner8_hover.png') no-repeat center;
+                background: url('../../assets/img/home/partner8_hover.png') no-repeat center;
             }
         }
     }

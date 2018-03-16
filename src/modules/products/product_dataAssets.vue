@@ -12,7 +12,7 @@
                 <h2>Product&nbsp;Overview</h2>
             </header>
             <section class="clear">
-                <img class="fl" src="../../../assets/img/products/dataAssets/overview.png" alt="">
+                <img class="fl" src="../../assets/img/products/dataAssets/overview.png" alt="">
                 <p class="fr">此系统主要服务于企业级数据中心，保护数据防删除、免泄露。系统基于存储、访问进行安全布防，对访问身份、权限范围、预置策略多维度进行审计分析，综合评估用户行为、潜在风险，实现数据可读、可编辑、风险预知、危险拦截，全方位确保数据存储、访问、使用安全。</p>
             </section>
         </div>
@@ -90,28 +90,28 @@
                     <ul class="clear">
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_manage.png" alt="">
+                                <img src="../../assets/img/products/dataAssets/features_manage.png" alt="">
                                 <h1>集中策略管理</h1>
                                 <p>建立唯一身份标识实名制管理，统一账号管理策略，实现与服务器请求对接和数据交换</p>
                             </div>
                         </li>
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_visit.png" alt="">
+                                <img src="../../assets/img/products/dataAssets/features_visit.png" alt="">
                                 <h1>集中访问控制</h1>
                                 <p>通过集中访问控制和细粒度命令级的授权策略，最小化权限原则，实现集中有序的操作管理，让正确的人在正确时间做正确的事。</p>
                             </div>
                         </li>
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_audit.png" alt="">
+                                <img src="../../assets/img/products/dataAssets/features_audit.png" alt="">
                                 <h1>集中安全审计</h1>
                                 <p>基于唯一身份标识，对访问用户、请求系统全程安全审计，监控用户及请求操作，对危险事件及时发现预警。</p>
                             </div>
                         </li>
                         <li class="fl">
                             <div>
-                                <img src="../../../assets/img/products/dataAssets/features_distribution.png" alt="">
+                                <img src="../../assets/img/products/dataAssets/features_distribution.png" alt="">
                                 <h1>权限分布执行</h1>
                                 <p>被保护服务器根据控制中心权限策略，对自身系统服务进行监控，实现运维行为管理，网络请求控制功能。</p>
                             </div>
@@ -128,21 +128,21 @@
             <section>
                 <ul class="clear">
                     <li class="fl">
-                        <img class="fl" src="../../../assets/img/products/dataAssets/application_1.png" alt="">
+                        <img class="fl" src="../../assets/img/products/dataAssets/application_1.png" alt="">
                         <div class="fr">
                             <h1>管理员、运维破坏、误操作</h1>
                             <p>实现对运维等身份操作行为限制管理，历史审计分析功能。再此基础上，实现本地硬件接口传输拦截，网络请求拦截和恶意请求、非法请求拒绝能力，API接口通信阻断等功能。</p>
                         </div>
                     </li>
                     <li class="fl">
-                        <img class="fl" src="../../../assets/img/products/dataAssets/application_2.png" alt="">
+                        <img class="fl" src="../../assets/img/products/dataAssets/application_2.png" alt="">
                         <div class="fr">
                             <h1>研发测试数据泄密</h1>
                             <p>避免研发测试等身份利用职位、工作便利获取数据私自转移。</p>
                         </div>
                     </li>
                     <li class="fl">
-                        <img class="fl" src="../../../assets/img/products/dataAssets/application_3.png" alt="">
+                        <img class="fl" src="../../assets/img/products/dataAssets/application_3.png" alt="">
                         <div class="fr">
                             <h1>外部攻击、爬虫窃取</h1>
                             <p>防网络攻击，窃取企业核心、偷窥用户隐私。</p>
@@ -270,7 +270,7 @@
                 height: 204px;
                 margin-top: 41px;
                 position: relative;
-                background: url('../../../assets/img/products/dataAssets/overview_.png') no-repeat center;
+                background: url('../../assets/img/products/dataAssets/overview_.png') no-repeat center;
                 h2{
                     width:116px;
                     height:116px;
@@ -283,34 +283,34 @@
                 h2:nth-child(1){
                     left:-6px;
                     top:70px;
-                    background: url('../../../assets/img/products/dataAssets/certification.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/certification.png') no-repeat center;
                 }
                 h2:nth-child(2){
                     left:91px;
                     top:10px;
-                    background: url('../../../assets/img/products/dataAssets/authorization.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/authorization.png') no-repeat center;
                 }
                 h2:nth-child(3){
                     left:188px;
                     top:70px;
-                    background: url('../../../assets/img/products/dataAssets/protect.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/protect.png') no-repeat center;
                 }
                 h2:nth-child(4){
                     left:285px;
                     top:10px;
-                    background: url('../../../assets/img/products/dataAssets/audit.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/audit.png') no-repeat center;
                 }
                 h2:nth-child(1):hover,h2:nth-child(1).current{
-                    background: url('../../../assets/img/products/dataAssets/certification_.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/certification_.png') no-repeat center;
                 }
                 h2:nth-child(2):hover,h2:nth-child(2).current{
-                    background: url('../../../assets/img/products/dataAssets/authorization_.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/authorization_.png') no-repeat center;
                 }
                 h2:nth-child(3):hover,h2:nth-child(3).current{
-                    background: url('../../../assets/img/products/dataAssets/protect_.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/protect_.png') no-repeat center;
                 }
                 h2:nth-child(4):hover,h2:nth-child(4).current{
-                    background: url('../../../assets/img/products/dataAssets/audit_.png') no-repeat center;
+                    background: url('../../assets/img/products/dataAssets/audit_.png') no-repeat center;
                 }
             }
         }
@@ -318,7 +318,7 @@
             section{
                 position: relative;
                 height:626px;
-                background: url('../../../assets/img/products/dataAssets/function.png') no-repeat center 120px;
+                background: url('../../assets/img/products/dataAssets/function.png') no-repeat center 120px;
                 h1{
                     height:100px;
                     line-height: 100px;

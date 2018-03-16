@@ -13,7 +13,7 @@
             </header>
             <section class="clear">
                 <p class="fl">随着国家关于客户隐私信息保护相关法律法规的出台，企业级大数据平台的安全管理能力需要不断提升，本平台重点针对Hadoop、MPP等与移动业务系统整合的大数据平台解决方案，重点实现了对Hadoop平台的网络安全、主机安全、应用安全、数据安全等方面的防护措施，产品系列主要包括了：大数据认证授权管控系统、大数据安全访问审计网关、大数据平台下敏感数据泄露防护系统，构建综合性共享生态。</p>
-                <img class="fr" src="../../../assets/img/products/dataSecurity/overview.png" alt="">
+                <img class="fr" src="../../assets/img/products/dataSecurity/overview.png" alt="">
             </section>
         </div>
         <div class="function">
@@ -30,7 +30,7 @@
                             <span class="fl">大数据认证授权管控系统</span>
                             <div class="fr">
                                 <h1>通过松耦合方式向多种Hadoop平台（如Apache Hadoop、Cloudera Distribution Hado-op及其他第3方定制的Hadoo-p平台）提供大数据认证授权管控能力，用于限制第3方应用向大数据平台的无认证授权访问，保障基本的大数据平台安全访问能力。</h1>
-                                <img src="../../../assets/img/products/dataSecurity/function_1.png" alt="">
+                                <img src="../../assets/img/products/dataSecurity/function_1.png" alt="">
                             </div>
                         </div>
                     </li>
@@ -38,7 +38,7 @@
                         <div class="commonWidth clear">
                             <div class="fl">
                                 <h1>通过网关的方式对大数据平台（Hadoop及其他数据库）提供大数据平台用户（数据使用者）的访问过滤、访问异常分析审计等监测功能，满足管理员及时发现大数据平台中可能存在的安全风险点以及应用攻击行为的需求，强化应用安全管控，保证数据访问服务正常、安全、有序地进行。</h1>
-                                <img src="../../../assets/img/products/dataSecurity/function_2.png" alt="">
+                                <img src="../../assets/img/products/dataSecurity/function_2.png" alt="">
                             </div>
                             <span class="fr">大数据安全访问审计网关</span>
                         </div>
@@ -48,7 +48,7 @@
                             <span class="fl">大数据平台下敏感数据泄漏防护系统</span>
                             <div class="fr">
                                 <h1>基于对通信行业中涉及企业客户、个人用户、业务数据中敏感字段进行分类、分级处理结果，形成具有自动化的数据分类分级管理能力；基于敏感数据自动化检测与发现技术，实现对用户数据请求的返回结果的隐私保护处理；基于多形态和多业务需求的脱敏函数库，形成对涉及敏感数据威胁的数据集进行基于硬件级高速动/静态脱敏能力。</h1>
-                                <img src="../../../assets/img/products/dataSecurity/function_3.png" alt="">
+                                <img src="../../assets/img/products/dataSecurity/function_3.png" alt="">
                             </div>
                         </div>
                     </li>
@@ -64,35 +64,35 @@
                 <ul class="clear">
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_1.png" alt="">
+                            <img src="../../assets/img/products/dataSecurity/features_1.png" alt="">
                             <h1>统一标准</h1>
                             <p>提供统一的Hadoop集群认证入口，保证Hadoop集群用户无法任意访问获取数据，以造成数据留失。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_2.png" alt="">
+                            <img src="../../assets/img/products/dataSecurity/features_2.png" alt="">
                             <h1>未授权重定向</h1>
                             <p>未经过LDAP、AD以及其他SSO非授权访问用户重定向。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_3.png" alt="">
+                            <img src="../../assets/img/products/dataSecurity/features_3.png" alt="">
                             <h1>禁止绕行访问</h1>
                             <p>实现Hadoop用户、4A业务用户、以及LDAP或AD域的原有业务系统用户的认证和授权；禁止非法用户绕过认证服务集群。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_4.png" alt="">
+                            <img src="../../assets/img/products/dataSecurity/features_4.png" alt="">
                             <h1>处理高效</h1>
                             <p>设备独立、无侵入式地与现有Hadoop平台相结合使用，单机性能支持1000MB/s读写I/O，支持集群式扩展负载均衡和热备转移功能。</p>
                         </div>
                     </li>
                     <li class="fl">
                         <div>
-                            <img src="../../../assets/img/products/dataSecurity/features_5.png" alt="">
+                            <img src="../../assets/img/products/dataSecurity/features_5.png" alt="">
                             <h1>细粒度权限</h1>
                             <p>细粒度访问控制，鉴权用户，同时满足操作对象和操作指令授权的“2层授权”后放行；细化操作对象到“服务器、数据库、目录、文件、表名、列、行”等内容。</p>
                         </div>
@@ -251,7 +251,7 @@
             background-color: #fcfcfc;
             section{
                 padding-bottom: 80px;
-                background: url('../../../assets/img/products/dataSecurity/deploymentForm.png') no-repeat right center;
+                background: url('../../assets/img/products/dataSecurity/deploymentForm.png') no-repeat right center;
                 h1{
                     height:60px;
                     line-height: 60px;
