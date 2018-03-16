@@ -96,7 +96,7 @@
             },
             href(arg) {
                 this.getNavData(arg);
-                this.$router.push({ path: '/mrray/'+arg })
+                this.$router.push({ path: '/'+arg })
             }
         },
         beforeMount() {
