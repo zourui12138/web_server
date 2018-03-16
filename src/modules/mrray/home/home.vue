@@ -176,30 +176,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @-webkit-keyframes bannerFlyIn {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(40px);
-            transform: translateY(40px);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-    }
-    @keyframes bannerFlyIn {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(40px);
-            transform: translateY(40px);
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-    }
     #home {
         /*.header*/
         .header{

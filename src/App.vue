@@ -22,32 +22,26 @@
         height: calc(100%);
         min-width: 1200px;
     }
-
     ul, ol, p, h1, h2, h3, h4, h5, h6, button, input {
         margin: 0;
         padding: 0;
         list-style: none;
         outline: none;
     }
-
     h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
         font-weight: normal;
     }
-
     input, button {
         outline: none;
         border: none;
     }
-
     .fl {
         float: left;
     }
-
     .fr {
         float: right;
     }
-
     .clear:after {
         content: '';
         display: block;
