@@ -13,8 +13,6 @@ import ProductWatermark from '~/modules/products/product_watermark'
 import AboutUsIntroduce from '~/modules/aboutUs/aboutUs_introduce'
 // 官网展示页面-关于我们-->招贤纳士
 import AboutUsJobs from '~/modules/aboutUs/aboutUs_jobs'
-// 官网后台页面-登录页面
-import Login from '~/modules/login/login'
 
 Vue.use(Router);
 
@@ -65,11 +63,6 @@ const router =  new Router({
             path: '/aboutUsJobs',
             name: 'aboutUsJobs',
             component: AboutUsJobs
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login
         }
     ]
 });
