@@ -1,6 +1,7 @@
 <template>
     <div id="product-watermark">
         <ProductBanner
+            @watchMessageBoard="watchMessageBoard"
             :banner-icon="bannerIcon"
             :banner-title="bannerTitle"
             :banner-content="bannerContent"
@@ -111,6 +112,11 @@
                     '《数字水印系统产品白皮书》',
                     '《数字水印系统产品介绍PPT》'
                 ]
+            }
+        },
+        methods: {
+            watchMessageBoard() {
+                this.$emit('watchMessageBoard','数字水印系统');
             }
         }
     }

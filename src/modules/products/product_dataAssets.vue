@@ -1,6 +1,7 @@
 <template>
     <div id="product-data-assets">
         <ProductBanner
+            @watchMessageBoard="watchMessageBoard"
             :bannerIcon="bannerIcon"
             :banner-title="bannerTitle"
             :banner-content="bannerContent"
@@ -201,6 +202,9 @@
                     case '保护' :this.overView.protectNav = true;break;
                     case '审计' :this.overView.auditNav = true;break;
                 }
+            },
+            watchMessageBoard() {
+                this.$emit('watchMessageBoard','数据资产防护系统');
             }
         }
     }

@@ -1,6 +1,7 @@
 <template>
     <div id="product-ray-shield">
         <ProductBanner
+            @watchMessageBoard="watchMessageBoard"
             :bannerIcon="bannerIcon"
             :banner-title="bannerTitle"
             :banner-content="bannerContent"
@@ -186,6 +187,11 @@
                     '《迅鳐数盾系统产品白皮书》',
                     '《迅鳐数盾系统产品介绍PPT》'
                 ]
+            }
+        },
+        methods: {
+            watchMessageBoard() {
+                this.$emit('watchMessageBoard','迅鳐数盾（Rayshield）');
             }
         }
     }

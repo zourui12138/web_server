@@ -4,7 +4,7 @@
             <div class="productIntroduce">
                 <h1 :style="productLogo">{{bannerTitle}}</h1>
                 <p v-html="bannerContent"></p>
-                <button type="button">申请试用</button>
+                <button type="button" @click="toggleMessageBoard">申请试用</button>
             </div>
             <div class="bannerIcon"><img :src="bannerIcon" alt=""></div>
         </div>
@@ -14,7 +14,14 @@
 <script>
     export default {
         name: "product_banner",
-        props: ['bannerIcon','bannerTitle','bannerContent','productLogo']
+        props: ['bannerIcon','bannerTitle','bannerContent','productLogo'],
+        methods: {
+            toggleMessageBoard() {
+                // 主动触发upup方法，'hehe'为向父组件传递的数据
+                // this.$emit('watchMessageBoard','hehe');
+                this.$emit('watchMessageBoard');
+            }
+        }
     }
 </script>
 

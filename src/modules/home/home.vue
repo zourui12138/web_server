@@ -137,7 +137,7 @@
 
 <script>
     import Footer from '~/common/components/footer'
-    import { homeNews } from "~/api/getData";
+    import { homeNews } from "~/api/getData"
 
     export default {
         name: "home",

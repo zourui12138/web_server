@@ -1,6 +1,7 @@
 <template>
     <div id="product-data-security">
         <ProductBanner
+            @watchMessageBoard="watchMessageBoard"
             :bannerIcon="bannerIcon"
             :banner-title="bannerTitle"
             :banner-content="bannerContent"
@@ -146,6 +147,11 @@
                     '《大数据安全监控平台产品白皮书》',
                     '《大数据安全监控平台产品介绍PPT》'
                 ]
+            }
+        },
+        methods: {
+            watchMessageBoard() {
+                this.$emit('watchMessageBoard','大数据安全监控平台');
             }
         }
     }

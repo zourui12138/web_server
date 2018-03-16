@@ -2,7 +2,7 @@
     <div id="container">
         <Header></Header>
         <VuePerfectScrollbar v-scroll class="container-scrollbar">
-            <router-view/>
+            <router-view @watchMessageBoard="openMessageBoard"/>
         </VuePerfectScrollbar>
         <div class="consult">
             <h1><img src="./assets/img/consult.png" alt=""/>咨询&建议</h1>
@@ -33,7 +33,7 @@
                                         <p :class="{current : messageBoardMsg.product === '数字水印系统'}" @click="toggleDropDown('数字水印系统')">数字水印系统</p>
                                         <p :class="{current : messageBoardMsg.product === '迅鳐数盾（Rayshield）'}" @click="toggleDropDown('迅鳐数盾（Rayshield）')">迅鳐数盾（Rayshield）</p>
                                         <p :class="{current : messageBoardMsg.product === '大数据安全监控平台'}" @click="toggleDropDown('大数据安全监控平台')">大数据安全监控平台</p>
-                                        <p :class="{current : messageBoardMsg.product === '大数据安全监控平台'}" @click="toggleDropDown('大数据安全监控平台')">数据资产防护系统</p>
+                                        <p :class="{current : messageBoardMsg.product === '数据资产防护系统'}" @click="toggleDropDown('数据资产防护系统')">数据资产防护系统</p>
                                     </div>
                                 </transition>
                             </div>
@@ -85,6 +85,10 @@
             toggleMessageBoard() {
                 this.maskUI = !this.maskUI;
                 this.messageBoardUI = !this.messageBoardUI;
+            },
+            openMessageBoard(arg) {
+                this.toggleMessageBoard();
+                this.messageBoardMsg.product = arg;
             }
         }
     }

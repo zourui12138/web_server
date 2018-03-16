@@ -1,6 +1,7 @@
 <template>
     <div id="product-sensitive">
         <ProductBanner
+            @watchMessageBoard="watchMessageBoard"
             :bannerIcon="bannerIcon"
             :banner-title="bannerTitle"
             :banner-content="bannerContent"
@@ -111,6 +112,11 @@
                     '《敏感数据与免泄露系统产品白皮书》',
                     '《敏感数据与免泄露系统产品介绍PPT》'
                 ]
+            }
+        },
+        methods: {
+            watchMessageBoard() {
+                this.$emit('watchMessageBoard','敏感数据与免泄露系统');
             }
         }
     }
