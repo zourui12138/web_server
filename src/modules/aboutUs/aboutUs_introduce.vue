@@ -69,12 +69,12 @@
                                 </transition>
                                 <transition name="bounce">
                                     <div v-show="currentCoreCreation === '夏琦'">
-                                        <p v-for="i in coreCreationList[1].personalProfile"><strong></strong><span>{{i}}</span></p>
+                                        <p v-for="i in coreCreationList[0].personalProfile"><strong></strong><span>{{i}}</span></p>
                                     </div>
                                 </transition>
                                 <transition name="bounce">
                                     <div v-show="currentCoreCreation === '陈瑞东'">
-                                        <p v-for="i in coreCreationList[2].personalProfile"><strong></strong><span>{{i}}</span></p>
+                                        <p v-for="i in coreCreationList[0].personalProfile"><strong></strong><span>{{i}}</span></p>
                                     </div>
                                 </transition>
                             </li>
@@ -86,12 +86,12 @@
                                 </transition>
                                 <transition name="bounce">
                                     <div v-show="currentCoreCreation === '夏琦'">
-                                        <p>{{coreCreationList[1].researchDirection}}</p>
+                                        <p>{{coreCreationList[0].researchDirection}}</p>
                                     </div>
                                 </transition>
                                 <transition name="bounce">
                                     <div v-show="currentCoreCreation === '陈瑞东'">
-                                        <p>{{coreCreationList[2].researchDirection}}</p>
+                                        <p>{{coreCreationList[0].researchDirection}}</p>
                                     </div>
                                 </transition>
                             </li>
@@ -103,12 +103,12 @@
                                 </transition>
                                 <transition name="bounce">
                                     <div v-show="currentCoreCreation === '夏琦'">
-                                        <p v-for="i in coreCreationList[1].kudos"><strong></strong><span>{{i}}</span></p>
+                                        <p v-for="i in coreCreationList[0].kudos"><strong></strong><span>{{i}}</span></p>
                                     </div>
                                 </transition>
                                 <transition name="bounce">
                                     <div v-show="currentCoreCreation === '陈瑞东'">
-                                        <p v-for="i in coreCreationList[2].kudos"><strong></strong><span>{{i}}</span></p>
+                                        <p v-for="i in coreCreationList[0].kudos"><strong></strong><span>{{i}}</span></p>
                                     </div>
                                 </transition>
                             </li>
@@ -325,6 +325,7 @@
                 if(!this.isAnimate){
                     index === 1 && (this.moveRight());
                     index === 2 && (this.moveLeft());
+                    console.log(index);
                     setTimeout(function () {
                         me.isAnimate = false;
                         me.$set(me.coreCreationClassName,0,'');
