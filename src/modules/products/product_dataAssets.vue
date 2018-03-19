@@ -156,11 +156,17 @@
             :documents-list="documentsList">
         </ProductDocuments>
         <Footer></Footer>
+        <Mask :maskUI="true"></Mask>
+        <MessageBoard
+            :messageBoardUI="true"
+            :product="product"/>
     </div>
 </template>
 
 <script>
     import Footer from '~/common/components/footer'
+    import Mask from '~/common/components/mask'
+    import MessageBoard from '~/common/components/messageBoard'
     import ProductBanner from './components/product_banner'
     import ProductDocuments from './components/product_documents'
     import bannerIcon from '~/assets/img/products/dataAssets/banner_icon.png'
@@ -168,9 +174,10 @@
 
     export default {
         name: "product_data-assets",
-        components: {Footer, ProductBanner, ProductDocuments},
+        components: {Footer, ProductBanner, ProductDocuments, Mask, MessageBoard},
         data() {
             return{
+                product : '数据资产防护系统',
                 bannerIcon : bannerIcon,
                 productLogo : {
                     background : 'url('+ productLogo +') no-repeat 0 center'
@@ -204,7 +211,8 @@
                 }
             },
             watchMessageBoard() {
-                this.$emit('watchMessageBoard','数据资产防护系统');
+                console.log(123);
+                //this.$emit('watchMessageBoard','数据资产防护系统');
             }
         }
     }
