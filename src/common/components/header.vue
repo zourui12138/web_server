@@ -30,7 +30,7 @@
 
 <script>
     export default {
-        name: "containerHeader",
+        name: "headerComponent",
         data() {
             return{
                 homeNav : false,
