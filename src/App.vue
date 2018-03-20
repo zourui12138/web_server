@@ -169,7 +169,7 @@
             border-left:2px solid #2e95ee;
             border-right:2px solid #2e95ee;
         }
-        /*模糊层*/
+        /*模糊层样式*/
         .mask{
             position: fixed;
             top:0;
@@ -188,7 +188,7 @@
             -webkit-animation: fadeOut .3s;
             animation: fadeOut .3s;
         }
-        /*留言板*/
+        /*留言板样式*/
         .messageBoard{
             position: fixed;
             top:20%;
