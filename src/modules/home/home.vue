@@ -137,7 +137,6 @@
 
 <script>
     import Footer from '~/common/components/footer'
-    import { homeNews } from "~/api/getData"
 
     export default {
         name: "home",
@@ -164,11 +163,6 @@
                 this.bannerShow = [false,false,false];
                 this.bannerShow[index] = true;
                 this.bannerSlider();
-            },
-            async getNewsData() {
-                let data;
-                data = await homeNews();
-                console.log(data);
             }
         },
         mounted() {
